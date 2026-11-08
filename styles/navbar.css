@@ -1,0 +1,10 @@
+.nav-demo {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 18px; padding: 18px 22px; background: #0b1729;
+  border: 1px solid rgba(157,190,230,.2); border-radius: 16px;
+}
+.nav-brand { color: #68d8ff; font-size: 1.2rem; font-weight: 800; text-decoration: none; }
+.nav-menu { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.nav-menu a { color: #eaf3ff; text-decoration: none; padding: 8px 12px; border-radius: 8px; }
+.nav-menu a:hover { background: #1a3558; color: #68d8ff; }
+@media(max-width:650px) { .nav-demo { align-items: flex-start; flex-direction: column; } }
