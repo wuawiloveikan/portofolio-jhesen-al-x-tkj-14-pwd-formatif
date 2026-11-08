@@ -1,0 +1,16 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+.gallery-item {
+  overflow: hidden; background: #101d32; border: 1px solid rgba(157,190,230,.2);
+  border-radius: 16px; transition: transform .2s, border-color .2s;
+}
+.gallery-item:hover { transform: translateY(-4px); border-color: #4ea1ff; }
+.gallery-item img { display: block; width: 100%; height: 210px; object-fit: contain; background: #080f1d; }
+.gallery-item .card-body { padding: 16px; }
+.gallery-item h3 { color: #68d8ff; margin: 0 0 7px; }
+.gallery-item p { color: #b7c7dc; margin: 0; font-size: .94rem; }
+@media(max-width:850px) { .gallery { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media(max-width:560px) { .gallery { grid-template-columns: 1fr; } }
