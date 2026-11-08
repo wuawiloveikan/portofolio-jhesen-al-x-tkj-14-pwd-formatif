@@ -1,0 +1,65 @@
+:root {
+  --bg: #080f1d;
+  --surface: #101d32;
+  --surface-2: #142641;
+  --text: #edf4ff;
+  --muted: #a9bad2;
+  --blue: #4ea1ff;
+  --cyan: #68d8ff;
+  --line: rgba(157, 190, 230, .18);
+  --radius: 18px;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.65;
+}
+a { color: var(--cyan); }
+a:hover { color: #fff; }
+.site-header {
+  background: #050a13;
+  border-bottom: 1px solid var(--line);
+  padding: 24px 6%;
+  text-align: center;
+}
+.site-header h1 { margin: 0; font-size: clamp(1.7rem, 4vw, 2.5rem); }
+.site-header p { margin: 6px 0 0; color: var(--muted); }
+main { width: min(1100px, 90%); margin: 34px auto; }
+.section { margin: 28px 0; }
+.section h2 { color: var(--cyan); font-size: 1.45rem; margin-bottom: 14px; }
+.intro, .panel, .link-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+}
+.link-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 14px;
+}
+.link-card { display: block; text-decoration: none; color: var(--text); transition: transform .2s, border-color .2s; }
+.link-card:hover { transform: translateY(-3px); border-color: var(--blue); }
+.link-card strong { display: block; color: var(--cyan); margin-bottom: 5px; }
+.link-card span { color: var(--muted); font-size: .94rem; }
+footer {
+  margin-top: 50px; padding: 18px; text-align: center;
+  background: #050a13; color: var(--muted); font-size: .88rem;
+  border-top: 1px solid var(--line);
+}
+.back-home { display: inline-block; margin: 10px 0 24px; }
+.btn {
+  display: inline-block; padding: 10px 17px; border-radius: 10px;
+  background: var(--blue); color: #06101e; font-weight: bold;
+  text-decoration: none; border: 0; cursor: pointer;
+}
+.btn:hover { background: var(--cyan); color: #06101e; }
+img { max-width: 100%; }
+@media (max-width: 600px) {
+  main { width: 92%; margin: 22px auto; }
+  .intro, .panel, .link-card { padding: 17px; }
+}
