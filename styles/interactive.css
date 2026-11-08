@@ -1,0 +1,11 @@
+.demo-links { display: flex; flex-wrap: wrap; gap: 14px; }
+.demo-links a, .demo-links button {
+  display: inline-block; padding: 12px 18px; border-radius: 10px;
+  border: 1px solid #4ea1ff; background: #102541; color: #edf4ff;
+  text-decoration: none; cursor: pointer; font: inherit;
+  transition: background-color .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.demo-links a:hover, .demo-links button:hover {
+  background: #4ea1ff; color: #06101e; transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(78,161,255,.2);
+}
