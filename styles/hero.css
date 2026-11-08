@@ -1,0 +1,17 @@
+.hero {
+  min-height: 390px; padding: 45px; display: flex; align-items: center;
+  border-radius: 22px; overflow: hidden; position: relative;
+  background: linear-gradient(115deg, #071326, #12365d 65%, #0b1c33);
+  border: 1px solid rgba(157,190,230,.25);
+}
+.hero-content { max-width: 680px; position: relative; z-index: 1; }
+.hero-content h1, .hero-content p { opacity: 0; animation: appear .8s ease forwards; }
+.hero-content h1 { font-size: clamp(2.1rem, 5vw, 3.8rem); margin: 0; }
+.hero-content p { color: #c9dcf4; font-size: 1.1rem; animation-delay: .6s; }
+.hero-content .btn { opacity: 0; animation: appear .8s ease .9s forwards; }
+.hero::after {
+  content: ""; position: absolute; width: 280px; height: 280px; right: 8%; top: 12%;
+  border-radius: 50%; background: rgba(78,161,255,.22); filter: blur(10px);
+}
+@keyframes appear { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } }
